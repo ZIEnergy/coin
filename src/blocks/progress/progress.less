@@ -1,0 +1,35 @@
+.progress {
+  margin-top: 4rem;
+  
+  &__header {
+    color: #000;
+    font-family: @font-main;
+    font-size: 3.4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  &__content {
+    margin-top: 1.6rem;
+  }
+  
+  &__content-row {
+    display: flex;
+    
+    &:nth-child(n+2) {
+      margin-top: 1.7rem;
+    }
+  }
+  
+  &__item {
+    width: 6.6rem;
+    height: 6.9rem;
+    background: #bdbdbd;
+    border-radius: .8rem;
+    box-shadow: .2px .2px 2px 0px rgba(0,0,0,0.75);
+    
+    &--active {
+      background-image: linear-gradient(to top, #5bac39 0%, #6bd53d 100%);
+    }
+  }
+}

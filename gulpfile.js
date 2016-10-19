@@ -105,7 +105,7 @@ gulp.task('watch', function () {
     gulp.watch(['./src/styles/*.less', './src/styles/global/*.less', './src/blocks/**/*.less', './src/styles/plugins/*.less'], ['styles']);
     gulp.watch(['./src/pages/*.pug','./src/templates/*.pug','./src/blocks/**/*.pug'], ['templates']);
     gulp.watch(['./src/images/*','./src/blocks/**/images/*'], ['images']);
-    gulp.watch('./src/blocks/**/*.js', ['scripts']);
+    gulp.watch(['./src/blocks/**/*.js', './src/scripts/script.js'] ['scripts']);
 });
 
 gulp.task('dev', ['server', 'build', 'watch']);
