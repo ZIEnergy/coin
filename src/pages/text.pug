@@ -6,8 +6,39 @@ html(lang='en')
   body
     .wrapper
       +address
-      +article
-      +article
+      .article
+        .article__header Учтите в первую очередь!
+        ol.article__list
+          li.article__list-item 
+            span.article__list-item-number 1. 
+            |Если вы опаздываете более чем на 15 минут, мастер вправе отказать в выполнении услуги
+          li.article__list-item
+            span.article__list-item-number 2. 
+            |После процедуры нельзя контактировать с водой 8 часов
+          li.article__list-item
+            span.article__list-item-number 3. 
+            |После процедуры нельзя надевать бюстгальтер и украшения
+          li.article__list-item
+            span.article__list-item-number 4. 
+            |Если вы делаете загар к мероприятию, лучше прийти на процедуру за 1-2 дня
+          li.article__list-item
+            span.article__list-item-number 5. 
+            |Оплата только наличными
+          li.article__list-item 
+            span.article__list-item-number 6. 
+            |Если вы записались, но не сможете прийти или опаздываете – предупредите
+      .article
+        .article__header Если вы записались <br>загар на сегодня!
+        ol.article__list
+          li.article__list-item
+            span.article__list-item-number 1. 
+            |Примите душ с гелем (без мочалок и скрабов)
+          li.article__list-item
+            span.article__list-item-number 2. 
+            |Не наносите ничего на кожу – косметику, дезодоранты, духи или крема
+          li.article__list-item 
+            span.article__list-item-number 3.
+            |Приезжайте в свободной одежде или привозите её с собой (платье, шорты, майка не прозрачная)
       .map
         script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Yb69ZYCnn9ctHgIZesx6Zfluvg1baH37&amp;width=100%&amp;height=66rem&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
     include ../templates/scripts.pug
