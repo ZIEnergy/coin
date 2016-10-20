@@ -1,9 +1,19 @@
 $(document).ready(function(){
 
-$(".coin__button").click(function(t){t.preventDefault(),$(this).toggleClass("coin__button--spin"),$(".coin__message").slideToggle("fast")});
+$('.coin__button').click(function(e) {
+  e.preventDefault();
+  $(this).toggleClass('coin__button--spin');
+  $('.coin__discount').toggleClass('coin__discount--active');
+  setTimeout(function() {
+    $('.coin__message').slideToggle('fast');
+    $('html, body').animate({
+        scrollTop: $("#prize").offset().top
+    }, 500);
+  }, 4000);
+});
 
 
-$(".message").click(function(){$(".popup").fadeIn("fast"),$("body").addClass("body--blocked")}),$(".popup__button").click(function(){$(".popup").fadeOut("fast"),$("body").removeClass("body--blocked")});
+$(".slider__item").click(function(){$(".popup").fadeIn("fast"),$("body").addClass("body--blocked")}),$(".popup__button").click(function(){$(".popup").fadeOut("fast"),$("body").removeClass("body--blocked")});
 
 $(".slider").slick({infinite:!1});
 

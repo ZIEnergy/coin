@@ -2,5 +2,8 @@ mixin coin(additionalClass)
   .coin(class=additionalClass)
     .coin__header Чтобы выйграть скидку, <br>нажмите на монетку!
     .coin__arrow
-    a.coin__button(href="#") 50&#8381;
-    .coin__message Поздравляем, ваша скидка <br>на следующий визит — 100 руб!
+    a.coin__button(href="#") 
+      .coin__discount
+        span.coin__button-number 50
+        span.coin__button-currency &#8381;
+    .coin__message#prize Поздравляем, ваша скидка <br>на следующий визит — 100 руб!

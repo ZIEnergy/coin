@@ -1,6 +1,9 @@
 mixin progress(additionalClass)
   .progress(class=additionalClass)
-    .progress__header До следующего уровня осталось 
+    .progress__header 
+      |До следующего уровня осталось 
+      span.progress__target X
+      |&nbsp;посещений
     .progress__content
       .progress__content-row
         .progress__item.progress__item--active
@@ -11,16 +14,5 @@ mixin progress(additionalClass)
         .progress__item.progress__item--active
         .progress__item.progress__item--active
         .progress__item.progress__item--active
-        .progress__item
-        .progress__item
-      .progress__content-row
-        .progress__item.progress__item--active
-        .progress__item.progress__item--active
-        .progress__item.progress__item--active
-        .progress__item.progress__item--active
-        .progress__item.progress__item--active
-        .progress__item.progress__item--active
-        .progress__item
-        .progress__item
         .progress__item
         .progress__item

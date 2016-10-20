@@ -1,5 +1,14 @@
 $('.coin__button').click(function(e) {
   e.preventDefault();
   $(this).toggleClass('coin__button--spin');
-  $('.coin__message').slideToggle('fast');
+  $('.coin__discount').toggleClass('coin__discount--active');
+//  setInterval(function(){
+//    $('.coin__discount').toggle();
+//  }, 500);
+  setTimeout(function() {
+    $('.coin__message').slideToggle('fast');
+    $('html, body').animate({
+        scrollTop: $("#prize").offset().top
+    }, 500);
+  }, 4000);
 });

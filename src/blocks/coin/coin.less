@@ -22,9 +22,39 @@
     width: 19.8rem;
     height: 19.2rem;
     margin: 0 auto;
+    background: url(../coin-empty.png) no-repeat;
     background: url(../img/coin-spin.png) no-repeat;
     background-size: 141.4rem 19.5rem;
     margin-bottom: 9.4rem;
+    text-align: center;
+    text-decoration: none;
+    
+    &--spin {
+      animation: spin .5s steps(7) 8;
+      color: rgba(0, 0, 0, 0);
+    }
+  }
+  
+  &__discount {
+//    display: none;
+    transition: all 4s linear;
+    
+    &--active {
+      transform: rotateY(1440deg);
+    }
+  }
+    
+  &__button-number {
+    color: #836d36;
+    font-family: @font-main;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 19.2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__button-currency {
     color: #836d36;
     font-family: @font-main;
     font-size: 4.5rem;
@@ -32,11 +62,8 @@
     line-height: 19.2rem;
     text-align: center;
     text-decoration: none;
-    
-    &--spin {
-      animation: spin .3s steps(7) infinite;
-      color: rgba(0, 0, 0, 0);
-    }
+    position: relative;
+    z-index: 10;
   }
   
   &__message {

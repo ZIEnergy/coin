@@ -1,4 +1,4 @@
-$('.message').click(function() {
+$('.slider__item').click(function() {
   $('.popup').fadeIn('fast');
   $('body').addClass('body--blocked');
 });
