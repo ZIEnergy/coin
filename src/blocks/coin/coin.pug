@@ -4,6 +4,8 @@ mixin coin(additionalClass)
     .coin__arrow
     a.coin__button(href="#") 
       .coin__discount
-        span.coin__button-number 50
+        span.coin__button-number
         span.coin__button-currency &#8381;
-    .coin__message#prize Поздравляем, ваша скидка <br>на следующий визит — 100 руб!
+    .coin__message#prize Поздравляем, ваша скидка <br>на следующий визит — 
+      span.coin__message-discount
+      |&nbsp;руб!
