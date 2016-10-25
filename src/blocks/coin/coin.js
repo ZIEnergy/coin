@@ -1,11 +1,14 @@
 var timerId = 0;
   
-var discountPrice = ['50', '100', '150', '200', '250', '300', '1000', '2000'];
+var discountPrice = ['50', '100', '250', '300', '500', '800', '1000'];
 
 function discount() {
   timerId = setInterval(function () {
     $('.coin__discount').addClass('coin__discount--fading');
     var discountItem = discountPrice[Math.floor(Math.random()*discountPrice.length)];
+    discountPrice = jQuery.grep(discountPrice, function(value) {
+      return value != discountItem;
+    });
     $('.coin__button-number').html(discountItem);
     $('.coin__message-discount').html('100');
     setTimeout(function () {
