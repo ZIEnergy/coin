@@ -1,3 +1,4 @@
 $('.slider').slick({
-  infinite: false
+  infinite: false,
+  initialSlide: $('.slider__item').length
 });
