@@ -17,9 +17,10 @@ gulp.task('default', function () {
 });
 
 gulp.task('build', [
-    'clean',
     'fonts',
     'images',
+    'imagesfolder1',
+    'imagesfolder2',
     'scripts:jquery',
     'scripts:plugins',
     'scripts',
@@ -34,13 +35,25 @@ gulp.task('clean', function () {
 });
 
 gulp.task('images', function() {
-  gulp.src(['./src/images/*','./src/images/**/*','./src/blocks/**/images/*'])
+  gulp.src('./src/blocks/**/images/*')
     .pipe(rename({dirname: ''}))
     .pipe(imagemin({
       progressive: true,
       optimizationLevel: 7
     }))
     .pipe(gulp.dest('./build/img'))
+    .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('imagesfolder1', function() {
+  gulp.src(['./src/images/*','./src/images/**/*','./src/images/step3/**/*.png'])
+    .pipe(gulp.dest('./build/img'))
+    .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('imagesfolder2', function() {
+  gulp.src('./src/images/step3/**/*.png')
+    .pipe(gulp.dest('./build/img/step3'))
     .pipe(browserSync.reload({stream:true}));
 });
 

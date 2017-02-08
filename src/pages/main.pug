@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    .wrapper
+      +message('Мария, добрый день. Вы были в Веснушке уже 19 раз! Ваш уровень скидки: ')
+      +slider
+      +message('Ваша скидка на последнее посещение: ')
+      img.banknote(src="img/banknote.png", alt="Banknote")
+      +message('Чем больше посещений, тем выше шанс выиграть большую скидку')
+    +popup
+    include ../templates/scripts.pug

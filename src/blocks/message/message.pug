@@ -1,6 +1,3 @@
-mixin message(additionalClass)
+mixin message(content, additionalClass)
   .message(class=additionalClass)
-    .message__icon
-    p.message__content 
-      span.message__content-bold Мария
-      |, добрый день. Вы были в Веснушке уже 19 раз! Ваш уровень скидки: 
+    p.message__content #{content}
