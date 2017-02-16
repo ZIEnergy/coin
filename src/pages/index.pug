@@ -4,6 +4,9 @@ html(lang='en')
   include ../templates/blocks.pug
   
   body
+    .ui.loader.active
     .animation
       img#animation(src='', alt='')
     include ../templates/scripts.pug
+    script.
+      $('.loader').removeClass('active');
