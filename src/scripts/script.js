@@ -54,7 +54,7 @@ $('#animation').click(function () {
     
     setTimeout(function(){
       location.href='main.html';
-    }, 5000);
+    }, 7000);
     // }
   }
 });

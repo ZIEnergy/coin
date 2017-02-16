@@ -21,22 +21,22 @@ function discount() {
   }, 500);
 };
 
-$('.coin__button').click(function(e) {
-  e.preventDefault();
-  $(this).toggleClass('coin__button--spin');
-  $('.coin__discount').toggleClass('coin__discount--active');
-  discount();
-  setTimeout(function() {
-    $('.coin__message').slideToggle('fast');
-    $('html, body').animate({
-        scrollTop: $("#prize").offset().top
-    }, 500);
-    clearInterval(timerId);
-    $('.coin__button-number').html('100');
-    $(this).removeClass('coin__button--spin');
-    $('.coin__discount').addClass('coin__discount--fading');
-  }, 3000);
-});
+//$('.coin__button').click(function(e) {
+//  e.preventDefault();
+//  $(this).toggleClass('coin__button--spin');
+//  $('.coin__discount').toggleClass('coin__discount--active');
+//  discount();
+//  setTimeout(function() {
+//    $('.coin__message').slideToggle('fast');
+//    $('html, body').animate({
+//        scrollTop: $("#prize").offset().top
+//    }, 500);
+//    clearInterval(timerId);
+//    $('.coin__button-number').html('100');
+//    $(this).removeClass('coin__button--spin');
+//    $('.coin__discount').addClass('coin__discount--fading');
+//  }, 9000);
+//});
 
 
 
@@ -111,7 +111,7 @@ $('#animation').click(function () {
     
     setTimeout(function(){
       location.href='main.html';
-    }, 5000);
+    }, 7000);
     // }
   }
 });})
